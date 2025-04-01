@@ -10,6 +10,8 @@
 - [Classe Documento (diretório: ./src/prothera/system)](src/prothera/system/Document.java)
 <br><br>
 **Planilha base:**
+  ![image](https://github.com/user-attachments/assets/dcc03fad-4620-4a9a-badd-4823f3d68512)
+
 
 
 ### 3.1 - Instancie a planilha em objetos Java.
