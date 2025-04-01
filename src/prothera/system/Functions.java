@@ -2,11 +2,29 @@ package prothera.system;
 
 import java.util.*;
 
+/**
+ * A classe `Functions` contém métodos que realizam várias operações sobre uma lista de pessoas.
+ * As operações incluem:
+ * -> Busca por ID = searchPersonByID
+ * -> Listagem de pessoas ordenando por idade = listPeopleSortingAge
+ * -> Listagem de pessoas com mais de 50 anos = AgeOverFifty
+ * -> Listagem de pessoas sem CPF cadastrado = withoutCpf
+ * -> Listagem dos tipos de documentos no cadastro no momento da consulta = documentTypes
+ *
+ * @author Glauco Pereira
+ */
 public class Functions {
 
+    /** Separador utilizado nas impressões no console. */
     static String separator = "----------------------------------------";
 
-//    👉 Pessoa com ID = 2.
+    /**
+     * 👉 Pessoa com ID = 2:
+     * Busca uma pessoa pelo ID e exibe seus dados juntamente com seus documentos.
+     *
+     * @param people A lista de pessoas a ser pesquisada.
+     * @param id O ID da pessoa a ser buscada.
+     */
     public static void searchPersonByID(List<Person> people, int id) {
         System.out.println("PESSOA COM ID = " + id + ":");
         System.out.println(separator);
@@ -21,6 +39,12 @@ public class Functions {
         System.out.println();
     }
 
+    /**
+     * 👉 Listagem de pessoas em ordem crescente de idade:
+     * Lista as pessoas em ordem crescente de idade e exibe seus documentos.
+     *
+     * @param people A lista de pessoas a ser ordenada e exibida.
+     */
     public static void listPeopleSortingAge(List<Person> people) {
         System.out.println("PESSOAS EM ORDEM CRESCENTE DE IDADE:");
         System.out.println(separator);
@@ -34,6 +58,12 @@ public class Functions {
         }
     }
 
+    /**
+     * 👉 Pessoas com idade superior a 50 anos:
+     * Exibe as pessoas com idade superior a 50 anos e seus documentos.
+     *
+     * @param people A lista de pessoas a ser verificada.
+     */
     public static void AgeOverFifty(List<Person> people) {
         System.out.println("PESSOAS COM IDADE SUPERIOR A 50 ANOS:");
         System.out.println(separator);
@@ -48,7 +78,12 @@ public class Functions {
         }
     }
 
-
+    /**
+     * 👉 Pessoas que não possuem CPF:
+     * Exibe as pessoas que não possuem o documento do tipo CPF e seus documentos.
+     *
+     * @param people A lista de pessoas a ser verificada.
+     */
     public static void withoutCpf(List<Person> people) {
         System.out.println("PESSOAS QUE NÃO POSSUEM CPF:");
         System.out.println(separator);
@@ -63,6 +98,13 @@ public class Functions {
         }
     }
 
+    /**
+     * 👉 Listagem de tipos de documentos:
+     * Exibe os tipos de documentos registrados no sistema e suas descrições e
+     * caso não exista uma descrição para o item, exibirá "Sem descrição".
+     *
+     * @param people A lista de pessoas a ser analisada para extrair os tipos de documentos.
+     */
     public static void documentTypes(List<Person> people) {
         System.out.println("TIPOS DE DOCUMENTOS:");
         System.out.println(separator);

@@ -6,12 +6,28 @@ import prothera.system.Functions;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A classe `Main` instancia os objetos do tipo `Person` e `Document`, e chama funções
+ * para listar e processar informações sobre as pessoas e seus documentos.
+ *
+ * <p>Chama as funções da classe Functions.</p>
+ *
+ * @author Glauco Pereira
+ */
 public class Main {
+
+    /**
+     * O método principal do programa que instancia os objetos `Person` e `Document`,
+     * adiciona documentos a cada pessoa e chama funções da classe `Functions` para exibir
+     * diversas listagens e pesquisas.
+     *
+     * @param args Parâmetros de linha de comando (não utilizados).
+     */
     public static void main(String[] args) {
 
         String separator = "========================================";
 
-        // Instanciar todas as people e documentos conforme a planilha
+        // 3.1 - Instancie a planilha em objetos Java:
         List<Person> people = new ArrayList<>();
 
         Person luiz = new Person(1, "Luiz Roberto", 33);
@@ -53,25 +69,28 @@ public class Main {
         tamires.addDocument(new Document("RG", "7852123", "Carteira de Identidade"));
         people.add(tamires);
 
+//        3.2 - Crie um algoritmo para listar:
+//        -> Apenas chamadas, as funções estão em system/Functions
 
         System.out.println(separator);
-//        👉 Pessoa com ID = 2.
+
+//        👉 Pessoa com ID = 2:
         Functions.searchPersonByID(people, 2);
         System.out.println(separator);
 
-//        👉 Listagem de pessoas em ordem crescente de idade.
+//        👉 Listagem de pessoas em ordem crescente de idade:
         Functions.listPeopleSortingAge(people);
         System.out.println(separator);
 
-//        👉 Pessoas com idade superior a 50 anos.
+//        👉 Pessoas com idade superior a 50 anos:
         Functions.AgeOverFifty(people);
         System.out.println(separator);
 
-//        👉 Pessoas que não possuem CPF.
+//        👉 Pessoas que não possuem CPF:
         Functions.withoutCpf(people);
         System.out.println(separator);
 
-//        👉 Listagem de tipos de documentos.
+//        👉 Listagem de tipos de documentos:
         Functions.documentTypes(people);
         System.out.println(separator);
 
